@@ -1,0 +1,5 @@
+: traverseaspointer
+:
+$* <<EOI >!
+{ "a" : 1 }
+EOI

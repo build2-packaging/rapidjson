@@ -1,0 +1,5 @@
+: condense
+:
+$* <<EOI >!
+{ "a" : 1 }
+EOI

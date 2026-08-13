@@ -1,0 +1,5 @@
+: prettyauto
+:
+$* <<EOI >!
+{ "a" : 1 }
+EOI

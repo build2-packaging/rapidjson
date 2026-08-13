@@ -1,25 +1,25 @@
-# Example executables.
+# Example executables (path-qualified so the source dirs are not ignored).
 #
-simpledom
-tutorial
-simplereader
-simplewriter
-simplepullreader
-serialize
-lookaheadparser
-messagereader
-sortkeys
-parsebyparts
-pretty
-prettyauto
-condense
-capitalize
-jsonx
-traverseaspointer
-filterkey
-filterkeydom
-schemavalidator
-archivertest
+archivertest/archivertest
+capitalize/capitalize
+condense/condense
+filterkey/filterkey
+filterkeydom/filterkeydom
+jsonx/jsonx
+lookaheadparser/lookaheadparser
+messagereader/messagereader
+parsebyparts/parsebyparts
+pretty/pretty
+prettyauto/prettyauto
+schemavalidator/schemavalidator
+serialize/serialize
+simpledom/simpledom
+simplepullreader/simplepullreader
+simplereader/simplereader
+simplewriter/simplewriter
+sortkeys/sortkeys
+traverseaspointer/traverseaspointer
+tutorial/tutorial
 
 # Testscript output directories (can be symlinks).
 #
