@@ -9,6 +9,20 @@ using cxx
 hxx{*}: extension = h
 cxx{*}: extension = cpp
 
+# Optional RapidJSON features. Defaults match upstream (all off). The
+# corresponding preprocessor macros are exported to consumers.
+#
+config [bool] config.librapidjson.stdstring  ?= false
+config [bool] config.librapidjson.membersmap ?= false
+config [bool] config.librapidjson.sse2       ?= false
+config [bool] config.librapidjson.sse42      ?= false
+config [bool] config.librapidjson.neon       ?= false
+config [string] config.librapidjson.namespace ?= [null]
+
+if ($config.librapidjson.neon && \
+    ($config.librapidjson.sse2 || $config.librapidjson.sse42))
+  fail 'config.librapidjson.neon cannot be combined with sse2 or sse42'
+
 # The test target for cross-testing (running tests under Wine, etc).
 #
 test.target = $cxx.target
