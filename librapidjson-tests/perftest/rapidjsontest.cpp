@@ -1,0 +1,1 @@
+../../upstream/test/perftest/rapidjsontest.cpp

@@ -1,0 +1,6 @@
+import libs = librapidjson%lib{rapidjson}
+import gtest = gtest%lib{gtest}
+
+exe{perftest}: {hxx cxx}{**} $libs $gtest testscript
+
+cxx.poptions =+ "-I$src_base"
