@@ -1,0 +1,3 @@
+import libs = librapidjson%lib{rapidjson}
+
+exe{driver}: {hxx cxx}{**} $libs testscript{**}
