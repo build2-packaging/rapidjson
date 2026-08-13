@@ -1,0 +1,27 @@
+# Example executables.
+#
+simpledom
+tutorial
+simplereader
+simplewriter
+simplepullreader
+serialize
+lookaheadparser
+messagereader
+sortkeys
+parsebyparts
+pretty
+prettyauto
+condense
+capitalize
+jsonx
+traverseaspointer
+filterkey
+filterkeydom
+schemavalidator
+archivertest
+
+# Testscript output directories (can be symlinks).
+#
+test
+test-*
