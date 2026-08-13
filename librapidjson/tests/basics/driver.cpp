@@ -1,34 +1,21 @@
-#include <sstream>
-#include <stdexcept>
-
-#include <rapidjson/rapidjson.h>
+#include <rapidjson/document.h>
+#include <rapidjson/writer.h>
+#include <rapidjson/stringbuffer.h>
 
 #undef NDEBUG
 #include <cassert>
 
 int main ()
 {
-  using namespace std;
   using namespace rapidjson;
 
-  // Basics.
-  //
-  {
-    ostringstream o;
-    say_hello (o, "World");
-    assert (o.str () == "Hello, World!\n");
-  }
+  Document d;
+  d.Parse ("{\"project\":\"rapidjson\",\"stars\":10}");
+  assert (!d.HasParseError ());
+  assert (d["stars"].GetInt () == 10);
 
-  // Empty name.
-  //
-  try
-  {
-    ostringstream o;
-    say_hello (o, "");
-    assert (false);
-  }
-  catch (const invalid_argument& e)
-  {
-    assert (e.what () == string ("empty name"));
-  }
+  StringBuffer buf;
+  Writer<StringBuffer> w (buf);
+  d.Accept (w);
+  assert (buf.GetSize () > 0);
 }
