@@ -15,7 +15,7 @@ The development setup for `rapidjson` uses the standard `bdep`-based workflow.
 For example:
 
 ```
-git clone --recurse-submodules .../rapidjson.git
+git clone --recurse-submodules https://github.com/build2-packaging/rapidjson.git
 cd rapidjson
 
 bdep init -C @gcc cc config.cxx=g++
