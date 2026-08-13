@@ -1,9 +1,11 @@
-# librapidjson-tests - An executable
+# librapidjson-tests - Tests for the RapidJSON C++ library
 
-This is a `build2` package for the [`<UPSTREAM-NAME>`](https://<UPSTREAM-URL>)
-executable. It is a <SUMMARY-OF-FUNCTIONALITY>.
+This is a `build2` package for the [RapidJSON](https://github.com/Tencent/rapidjson)
+upstream unit tests. It is pulled in automatically when testing `librapidjson`
+(`tests: librapidjson-tests == $`).
 
-Note that the `librapidjson-tests` executable in this package provides `build2` metadata.
+The JSON-licensed `bin/jsonchecker/` corpus and `jsoncheckertest.cpp` are
+omitted. Performance tests are omitted.
 
 
 ## Usage
@@ -13,13 +15,16 @@ To start using `librapidjson-tests` in your project, add the following build-tim
 appropriate:
 
 ```
-depends: * librapidjson-tests ^<VERSION>
+depends: * librapidjson-tests ^1.1.0
 ```
+
+Consumers of `librapidjson` do not normally depend on this package directly.
+The `tests:` field on `librapidjson` is enough.
 
 Then import the executable in your `buildfile`:
 
 ```
-import! [metadata] <TARGET> = librapidjson-tests%exe{<TARGET>}
+import unittest = librapidjson-tests%exe{unittest}
 ```
 
 
@@ -28,18 +33,12 @@ import! [metadata] <TARGET> = librapidjson-tests%exe{<TARGET>}
 This package provides the following importable targets:
 
 ```
-exe{<TARGET>}
+exe{unittest}
 ```
 
-<DESCRIPTION-OF-IMPORTABLE-TARGETS>
+This is the upstream gtest-based unit test executable.
 
 
 ## Configuration variables
 
-This package provides the following configuration variables:
-
-```
-[bool] config.librapidjson_tests.<VARIABLE> ?= false
-```
-
-<DESCRIPTION-OF-CONFIG-VARIABLES>
+This package has no configuration variables.
