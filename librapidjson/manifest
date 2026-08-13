@@ -1,17 +1,20 @@
 : 1
 name: librapidjson
-version: 0.1.0-a.0.z
+version: 1.1.0-a.0.z
+upstream-version: 2025-02-05
 type: lib,binless
 language: c++
-project: build2-RapidJSON
-summary: rapidjson C++ library
-license: other: proprietary ; Not free/open source.
+project: rapidjson
+summary: JSON parser/generator C++ library
+license: MIT AND BSD-3-Clause
 description-file: README.md
 package-description-file: PACKAGE-README.md
 changes-file: CHANGELOG.md
-url: https://example.org/upstream
-email: upstream@example.org
-package-url: https://github.com/build2-packaging/build2-RapidJSON
-package-email: packaging@build2.org ; Mailing list.
+url: https://rapidjson.org
+doc-url: https://rapidjson.org
+src-url: https://github.com/Tencent/rapidjson
+package-url: https://github.com/build2-packaging/rapidjson
+package-email: packaging@build2.org
+topics: json parser, sax api, dom api
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
