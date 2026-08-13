@@ -1,6 +1,6 @@
 : 1
 name: librapidjson-tests
-version: 1.1.0-a.0.z
+version: 1.1.0
 upstream-version: 2025-02-05
 type: exe
 language: c++
