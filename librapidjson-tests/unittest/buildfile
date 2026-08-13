@@ -1,0 +1,9 @@
+import libs = librapidjson%lib{rapidjson}
+import gtest = gtest%lib{gtest}
+
+exe{unittest}: {hxx cxx}{** -namespacetest} libue{namespacetest} $libs $gtest testscript
+libue{namespacetest}: cxx{namespacetest} $libs $gtest
+
+# Upstream unit tests include "unittest.h" and enable std::string helpers.
+#
+cxx.poptions =+ "-I$src_base" -DRAPIDJSON_HAS_STDSTRING=1

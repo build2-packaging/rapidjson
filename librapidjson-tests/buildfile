@@ -1,1 +1,1 @@
-./: {*/ -build/} doc{PACKAGE-README.md} manifest
+./: {*/ -build/ -bin/} file{bin/**} doc{PACKAGE-README.md} legal{LICENSE} manifest

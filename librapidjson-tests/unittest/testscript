@@ -1,0 +1,6 @@
+: unittest
+:
+# Data files are resolved relative to the package root (bin/...).
+# gtest writes progress to stdout. Show it only at verbosity 2 or above.
+#
+env -c $src_root -- $* >!
