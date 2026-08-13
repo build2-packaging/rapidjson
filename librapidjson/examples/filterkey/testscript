@@ -1,5 +1,0 @@
-: filterkey
-:
-$* string <<EOI >!
-{ "string": 1, "keep": 2 }
-EOI

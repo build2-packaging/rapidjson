@@ -1,3 +1,0 @@
-: perftest
-:
-env -c $src_root -- $* >!

@@ -1,5 +1,0 @@
-: capitalize
-:
-$* <<EOI >!
-{ "a" : 1 }
-EOI

@@ -5,9 +5,9 @@ using cxx
 hxx{*}: extension = h
 cxx{*}: extension = cpp
 
-# Every exe{} in this subproject is by default a test.
+# Examples are built with the package but are not tests.
 #
-exe{*}: test = true
+exe{*}: test = false
 
 # The test target for cross-testing (running tests under Wine, etc).
 #

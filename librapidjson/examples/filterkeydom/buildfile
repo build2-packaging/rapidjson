@@ -1,6 +1,6 @@
 import libs = librapidjson%lib{rapidjson}
 
-exe{filterkeydom}: {hxx cxx}{**} $libs testscript
+exe{filterkeydom}: {hxx cxx}{**} $libs
 
 cxx.poptions += -D__STDC_FORMAT_MACROS
 

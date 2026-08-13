@@ -1,6 +1,6 @@
 import libs = librapidjson%lib{rapidjson}
 
-exe{jsonx}: {hxx cxx}{**} $libs testscript
+exe{jsonx}: {hxx cxx}{**} $libs
 
 cxx.poptions += -D__STDC_FORMAT_MACROS
 

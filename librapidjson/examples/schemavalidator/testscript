@@ -1,5 +1,0 @@
-: schemavalidator
-:
-$* $src_base/schema.json <<EOI >!
-{}
-EOI
