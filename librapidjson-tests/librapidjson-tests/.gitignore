@@ -1,0 +1,5 @@
+librapidjson-tests
+
+# Testscript output directory (can be symlink).
+#
+test-librapidjson-tests
