@@ -10,8 +10,8 @@ appropriate for development rather than consumption. If you want to use
 
 Packages in this repository:
 
-- `librapidjson` -- header-only library
-- `librapidjson-tests` -- upstream unit tests (depends on `gtest`)
+- `librapidjson` -- header-only library (in-tree `tests/` smoke test and `examples/`)
+- `librapidjson-tests` -- upstream unit tests and perftest (depends on `gtest`)
 
 Upstream is imported as a `git` submodule in `upstream/`, currently pinned to
 commit `24b5e7a` (2025-02-05). The same commit is what vcpkg ships as

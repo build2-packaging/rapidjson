@@ -1,11 +1,11 @@
 # librapidjson-tests - Tests for the RapidJSON C++ library
 
 This is a `build2` package for the [RapidJSON](https://github.com/Tencent/rapidjson)
-upstream unit tests. It is pulled in automatically when testing `librapidjson`
-(`tests: librapidjson-tests == $`).
+upstream unit tests and performance tests. It is pulled in automatically when
+testing `librapidjson` (`tests: librapidjson-tests == $`).
 
 The JSON-licensed `bin/jsonchecker/` corpus and `jsoncheckertest.cpp` are
-omitted. Performance tests are omitted.
+omitted.
 
 
 ## Usage
@@ -25,6 +25,7 @@ Then import the executable in your `buildfile`:
 
 ```
 import unittest = librapidjson-tests%exe{unittest}
+import perftest = librapidjson-tests%exe{perftest}
 ```
 
 
@@ -34,9 +35,11 @@ This package provides the following importable targets:
 
 ```
 exe{unittest}
+exe{perftest}
 ```
 
-This is the upstream gtest-based unit test executable.
+`exe{unittest}` is the upstream gtest unit test executable. `exe{perftest}`
+is the upstream gtest performance suite.
 
 
 ## Configuration variables

@@ -37,7 +37,9 @@ lib{rapidjson}
 ```
 
 This is a binless (header-only) library. Public headers are included as
-`<rapidjson/document.h>` and similar.
+`<rapidjson/document.h>` and similar. Upstream examples live in the `examples/`
+subproject of this package and are built and run by `b test`. They are not
+installed.
 
 
 ## Configuration variables
